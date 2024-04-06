@@ -5,6 +5,7 @@ import { GiProgression } from "react-icons/gi";
 import { RxCalendar } from "react-icons/rx";
 import { FaVideo } from "react-icons/fa6";
 import { TiMessages } from "react-icons/ti";
+import { FaSearch } from "react-icons/fa";
 
 export default function Home() {
     const [scrollHeight, setScrollHeight] = useState(0);
@@ -46,38 +47,99 @@ export default function Home() {
         <div className='flex flex-col text-white pt-[15vh] gap-[10vh]'>
             <h1 className='text-8xl text-center'>Monetize Your Helth</h1>
             <p className='w-[70%] text-center self-center text-4xl' style={{ lineHeight: '2em' }}>
-                FitLoupe is a cutting-edge fitness app designed to revolutionize your workout experience. 
-                Our platform offers personalized training programs tailored to your goals and fitness level, ensuring maximum effectiveness. 
-                With real-time tracking and progress monitoring, you'll stay motivated and accountable on your fitness journey. 
-                Experience convenience, customization, and results with FitLoupe – your ultimate fitness companion.
+            FitLoupe serves as a modern alternative to traditional tools, providing trainers with a user-friendly platform to create personalized workout plans, track client progress, manage schedules, and facilitate seamless communication.
             </p>
             <div className='progress-container'>
                 <div className={`progress-item ${activeIndex === 0 ? 'active' : ''}`} style={{ order: 2, transform: `translateX(${activeIndex === 0 ? '110%' : activeIndex === 1 ? '0%' : '-110%'}) scale(${activeIndex === 1 ? 1 : 0.7})`, opacity: `${activeIndex === 1 ? 1 : 0.4}` }}>
                     <img src="../public/images/clientInfo.png" alt="Client Info" />
-                    <div className='pt-10 flex flex-col items-center'>
-                        <h1 className='text-4xl'>Kalendar ce ovde</h1>
-                        <p>Kratak tekst ove beneficije</p>
+                    <div className='pt-10 flex flex-col w-full pl-5'>
+                        <h1 className='text-6xl text-center pb-5'>Kalendar ce ovde</h1>
+                        <div className='text-3xl pt-5'>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                Organize Schedule
+                                </p>
+                            </span>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                Client Scheduling Features.
+                                </p>
+                            </span>
+                          
+                        
+                        </div>
                     </div>
                 </div>
                 <div className={`progress-item ${activeIndex === 1 ? 'active' : ''}`} style={{ order: 3, transform: `translateX(${activeIndex === 0 ? '-240%' : activeIndex === 1 ? '-20%' : '-125%'}) scale(${activeIndex === 2 ? 1 : 0.7})`, opacity: `${activeIndex === 2 ? 1 : 0.4}` }}>
                     <img src="../public/images/progres.png" alt="Progress" />
-                    <div className='pt-10 flex flex-col items-center'>
-                    <h1 className='text-4xl'>Track Progress</h1>
-                    <p>Kratak tekst ove beneficije</p>
+                    <div className='pt-10 flex flex-col w-full pl-5'>
+                        <h1 className='text-6xl text-center pb-5'>Track Progress</h1>
+                        <div className='text-3xl pt-5'>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                    Graphic Progress Display
+                                </p>
+                            </span>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                    Progress Visualization
+                                </p>
+                            </span>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                    Identify Patterns In Progress
+                                </p>
+                            </span>
+                            
+                        </div>
                     </div>
                 </div>
                 <div className={`progress-item ${activeIndex === 2 ? 'active' : ''}`} style={{ order: 1, transform: `translateX(${activeIndex === 0 ? '130%' : activeIndex === 1 ? '20%' : '240%'}) scale(${activeIndex === 0 ? 1 : 0.7})`, opacity: `${activeIndex === 0 ? 1 : 0.4}` }}>
                     <img src="../public/images/plan.png" alt="Plan" />
-                    <div className='pt-10 flex flex-col items-center'>
-                    <h1 className='text-4xl'>Fast and Transparent Plan</h1>
-                    <p>Kratak tekst ove beneficije</p>
+                    <div className='pt-10 flex flex-col w-full pl-5'>
+                        <h1 className='text-6xl text-center pb-5'>Fast and Simple Plan</h1>
+                        <div className='text-3xl pt-5'>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                Easy Workout Creation
+                                </p>
+                            </span>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                Remote Training
+                                </p>
+                            </span>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                Duplicate and Edit Plan
+                                </p>
+                            </span>
+                            <span className='flex items-center gap-[5%] pb-5'>
+                                <FaSearch color='cyan'/>
+                                <p>
+                                Client Workout Archives
+                                </p>
+                            </span>
+                       
+                        </div>
                     </div>
                 </div>
             </div>              
         </div>
-        <div ref={scrollRef} className='flex h-[100vh] mt-[10vh] px-[10%] py-[30vh]'>
+        <div className='mt-[30vh] ml-[5vh]'>
+            <h1 className='text-white text-8xl'>Key Benefits: </h1>
+        </div>
+        <div ref={scrollRef} className='flex h-[100vh]  px-[10%] py-[30vh]'>
             <div className='flex flex-col w-[49%] justify-between pt-[20vh] gap-[25vh]'>
-                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-full flex items-center gap-[5%]'>
+                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-3xl flex items-center gap-[5%]'>
                     <HiOutlineClipboardDocumentList color='white' size={120}/>
                     <div>
                        <h1>Easy Workout Plan</h1>
@@ -86,7 +148,7 @@ export default function Home() {
                        <p>500+ Exercise</p> 
                     </div>
                 </div>
-                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-full flex items-center gap-[5%] '>
+                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-3xl flex items-center gap-[5%] '>
                     <RxCalendar color='white' size={120}/>
                     <div>
                         <h1>Calendar</h1>
@@ -95,7 +157,7 @@ export default function Home() {
                     </div>
                     
                 </div>
-                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-full flex items-center gap-[5%] '>
+                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-3xl flex items-center gap-[5%] '>
                     <TiMessages color='white' size={120}/>
                     <div>
                         <h1>Chat</h1>
@@ -108,7 +170,7 @@ export default function Home() {
                 <div className='rounded-full h-[10vh]' style={{background:'linear-gradient(to bottom, #5DE0E6, #004AAD)', height: `${scrollHeight}vh`}}></div>
             </div>
             <div className='flex flex-col items-end justify-between w-[49%] gap-[25vh] pt-[40vh]'>
-                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-full flex items-center gap-[5%] '>
+                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-3xl flex items-center gap-[5%] '>
                     <GiProgression color='white' size={120}/>
                     <div>
                         <h1>Graphic of Progress</h1>
@@ -117,7 +179,7 @@ export default function Home() {
                         <p>Omogucava ukazivanje na dobre i lose  rutine</p> 
                     </div>
                 </div>
-                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-full flex items-center gap-[5%] '>
+                <div className='p-[2%] bg-[#0CC0DF] w-[80%] rounded-3xl flex items-center gap-[5%] '>
                     <FaVideo color='white' size={120}/>
                     <div>
                         <h1>Video Galery</h1>
